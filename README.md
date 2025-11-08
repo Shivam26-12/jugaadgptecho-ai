@@ -36,13 +36,11 @@ It integrates **YOLOv8** for object detection, a **GPS module** for location tra
 
 ## ⚙️ Hardware Components
 
-- Raspberry Pi / Microcontroller (compatible with Python)
+- Microcontroller (atmega) (compatible with Python)
 - USB / Pi Camera
 - HC-SR04 Ultrasonic Sensor
 - GPS Module
 - Microphone & Speaker
 
 ---
-
-## 🗂️ Project Structure
 
