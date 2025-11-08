@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Echo - Sensory Assistant</title>
+        <link rel="stylesheet" href="webecho2.css">
+</head>
+<body>
+  <div id="preloader"> 
+    <div class="loader-circle"></div>
+    <h2 class="loader-text">VISION ECHO<SPAN> BOOTING......</SPAN></h2>
+    <DIV class="scan-line"></DIV>
+  </div>
+
+    <header class="main-header">
+        <h1>Vision Echo</h1>
+        <p>A Sensory Assistance Device for the Visually Impaired</p>
+    </header>
+
+    <div id="video-container" class="video-display" style="display: none;">
+        <img id="video-stream" src="" alt="Live Video Feed" />
+    </div>
+
+
+    <nav class="main-navigation">
+        <div id="location-btn" class="nav-item">
+         <a href="https://maps.app.goo.gl/AYEUDWrsJ1yeXAWh6"> <button aria-label="Location Tracking Feature">Location </button></a>
+</div>
+        
+       
+        
+        <div id="video-btn" class="nav-item">
+            <button aria-label="Live video feed">Live Video</button>
+        
+      
+        <div id="audio-btn" class="nav-item">
+            <button aria-label="Audio narration output">Audio: ON</button>
+        </div>
+    </nav>
+
+        <footer>
+                 <pre id="footer">&copy; All rights reserved: JUGAAD GPT :
+             BHATT SHIVAM JIGAR
+             TARUN PANTHI
+             SUJAL KUMAR JAISWAL
+             SHREYANSH RAJ SINGH</pre>
+             <script>
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("preloader");
+        loader.classList.add("loaded");
+        setTimeout(() => loader.style.display = "none", 2000);
+    });
+</script>
+
+    </footer>
+    <div class="holo-sweep"></div>
+    <div class="particle" style="top:10%; left:20%; animation-delay:0s;"></div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const rainContainer = document.createElement("div");
+  rainContainer.classList.add("neon-rain");
+  document.body.appendChild(rainContainer);
+
+  const dropCount = 80; // increase for denser rain
+  for (let i = 0; i < dropCount; i++) {
+    const drop = document.createElement("div");
+    drop.classList.add("neon-drop");
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.animationDuration = 2 + Math.random() * 2 + "s";
+    drop.style.animationDelay = Math.random() * 4 + "s";
+    drop.style.height = 60 + Math.random() * 60 + "px";
+    drop.style.opacity = 0.3 + Math.random() * 0.5;
+    rainContainer.appendChild(drop);
+  }
+});
+</script>
+
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
